@@ -16,7 +16,15 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    NSData *randomData = [HqWalletUitls randomWithSize:128];
+    NSLog(@"randomData == %@",randomData.dataToString);
+    NSArray *words = [HqWalletUitls toMnemonicArrayWithRandomData:randomData];
+    NSLog(@"words==%@,count==%@",words,@(words.count));
+
+//    NSArray *words =  [HqWalletUitls generateMnemonic];
+//    NSLog(@"words==%@,count==%@",words,@(words.count));
+
+
 }
 
 

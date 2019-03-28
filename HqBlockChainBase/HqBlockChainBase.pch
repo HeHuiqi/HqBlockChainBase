@@ -1,0 +1,16 @@
+//
+//  HqBlockChainBase.pch
+//  HqBlockChainBase
+//
+//  Created by hehuiqi on 3/28/19.
+//  Copyright © 2019 hehuiqi. All rights reserved.
+//
+
+#ifndef HqBlockChainBase_pch
+#define HqBlockChainBase_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+#import "HqWalletUitls.h"
+
+#endif /* HqBlockChainBase_pch */

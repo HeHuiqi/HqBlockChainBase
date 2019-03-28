@@ -13,6 +13,13 @@
 		33EE6FEB224C607600024253 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33EE6FEA224C607600024253 /* Assets.xcassets */; };
 		33EE6FEE224C607600024253 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33EE6FEC224C607600024253 /* LaunchScreen.storyboard */; };
 		33EE6FF1224C607600024253 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 33EE6FF0224C607600024253 /* main.m */; };
+		33EE6FFB224C615D00024253 /* HqWalletUitls.m in Sources */ = {isa = PBXBuildFile; fileRef = 33EE6FFA224C615D00024253 /* HqWalletUitls.m */; };
+		33EE7000224C61BF00024253 /* BIP39EnglishWords.plist in Resources */ = {isa = PBXBuildFile; fileRef = 33EE6FFD224C61BF00024253 /* BIP39EnglishWords.plist */; };
+		33EE7001224C61BF00024253 /* BIP39ZhCNWords.plist in Resources */ = {isa = PBXBuildFile; fileRef = 33EE6FFE224C61BF00024253 /* BIP39ZhCNWords.plist */; };
+		33EE7002224C61BF00024253 /* BIP39ZhTWWords.plist in Resources */ = {isa = PBXBuildFile; fileRef = 33EE6FFF224C61BF00024253 /* BIP39ZhTWWords.plist */; };
+		33EE7005224C630200024253 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33EE7004224C630200024253 /* Security.framework */; };
+		33EE7008224C762000024253 /* NSData+HqDataHash.m in Sources */ = {isa = PBXBuildFile; fileRef = 33EE7007224C762000024253 /* NSData+HqDataHash.m */; };
+		33EE700B224C9F1200024253 /* NSString+HqString.m in Sources */ = {isa = PBXBuildFile; fileRef = 33EE700A224C9F1200024253 /* NSString+HqString.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +33,17 @@
 		33EE6FED224C607600024253 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		33EE6FEF224C607600024253 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		33EE6FF0224C607600024253 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		33EE6FF8224C60E200024253 /* HqBlockChainBase.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HqBlockChainBase.pch; sourceTree = "<group>"; };
+		33EE6FF9224C615D00024253 /* HqWalletUitls.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HqWalletUitls.h; sourceTree = "<group>"; };
+		33EE6FFA224C615D00024253 /* HqWalletUitls.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HqWalletUitls.m; sourceTree = "<group>"; };
+		33EE6FFD224C61BF00024253 /* BIP39EnglishWords.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = BIP39EnglishWords.plist; sourceTree = "<group>"; };
+		33EE6FFE224C61BF00024253 /* BIP39ZhCNWords.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = BIP39ZhCNWords.plist; sourceTree = "<group>"; };
+		33EE6FFF224C61BF00024253 /* BIP39ZhTWWords.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = BIP39ZhTWWords.plist; sourceTree = "<group>"; };
+		33EE7004224C630200024253 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		33EE7006224C762000024253 /* NSData+HqDataHash.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSData+HqDataHash.h"; sourceTree = "<group>"; };
+		33EE7007224C762000024253 /* NSData+HqDataHash.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSData+HqDataHash.m"; sourceTree = "<group>"; };
+		33EE7009224C9F1200024253 /* NSString+HqString.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+HqString.h"; sourceTree = "<group>"; };
+		33EE700A224C9F1200024253 /* NSString+HqString.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+HqString.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33EE7005224C630200024253 /* Security.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +63,7 @@
 			children = (
 				33EE6FE0224C607400024253 /* HqBlockChainBase */,
 				33EE6FDF224C607400024253 /* Products */,
+				33EE7003224C630200024253 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,17 +78,51 @@
 		33EE6FE0224C607400024253 /* HqBlockChainBase */ = {
 			isa = PBXGroup;
 			children = (
+				33EE6FF7224C608900024253 /* HqWalletUitls */,
 				33EE6FE1224C607400024253 /* AppDelegate.h */,
 				33EE6FE2224C607400024253 /* AppDelegate.m */,
 				33EE6FE4224C607400024253 /* ViewController.h */,
 				33EE6FE5224C607400024253 /* ViewController.m */,
 				33EE6FE7224C607400024253 /* Main.storyboard */,
+				33EE6FF8224C60E200024253 /* HqBlockChainBase.pch */,
 				33EE6FEA224C607600024253 /* Assets.xcassets */,
 				33EE6FEC224C607600024253 /* LaunchScreen.storyboard */,
 				33EE6FEF224C607600024253 /* Info.plist */,
 				33EE6FF0224C607600024253 /* main.m */,
 			);
 			path = HqBlockChainBase;
+			sourceTree = "<group>";
+		};
+		33EE6FF7224C608900024253 /* HqWalletUitls */ = {
+			isa = PBXGroup;
+			children = (
+				33EE6FFC224C616900024253 /* HqWalletMnemonic */,
+				33EE6FF9224C615D00024253 /* HqWalletUitls.h */,
+				33EE6FFA224C615D00024253 /* HqWalletUitls.m */,
+				33EE7006224C762000024253 /* NSData+HqDataHash.h */,
+				33EE7007224C762000024253 /* NSData+HqDataHash.m */,
+				33EE7009224C9F1200024253 /* NSString+HqString.h */,
+				33EE700A224C9F1200024253 /* NSString+HqString.m */,
+			);
+			path = HqWalletUitls;
+			sourceTree = "<group>";
+		};
+		33EE6FFC224C616900024253 /* HqWalletMnemonic */ = {
+			isa = PBXGroup;
+			children = (
+				33EE6FFD224C61BF00024253 /* BIP39EnglishWords.plist */,
+				33EE6FFE224C61BF00024253 /* BIP39ZhCNWords.plist */,
+				33EE6FFF224C61BF00024253 /* BIP39ZhTWWords.plist */,
+			);
+			path = HqWalletMnemonic;
+			sourceTree = "<group>";
+		};
+		33EE7003224C630200024253 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				33EE7004224C630200024253 /* Security.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -129,6 +183,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				33EE6FEE224C607600024253 /* LaunchScreen.storyboard in Resources */,
+				33EE7002224C61BF00024253 /* BIP39ZhTWWords.plist in Resources */,
+				33EE7000224C61BF00024253 /* BIP39EnglishWords.plist in Resources */,
+				33EE7001224C61BF00024253 /* BIP39ZhCNWords.plist in Resources */,
 				33EE6FEB224C607600024253 /* Assets.xcassets in Resources */,
 				33EE6FE9224C607400024253 /* Main.storyboard in Resources */,
 			);
@@ -142,6 +199,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				33EE6FE6224C607400024253 /* ViewController.m in Sources */,
+				33EE700B224C9F1200024253 /* NSString+HqString.m in Sources */,
+				33EE7008224C762000024253 /* NSData+HqDataHash.m in Sources */,
+				33EE6FFB224C615D00024253 /* HqWalletUitls.m in Sources */,
 				33EE6FF1224C607600024253 /* main.m in Sources */,
 				33EE6FE3224C607400024253 /* AppDelegate.m in Sources */,
 			);
@@ -220,7 +280,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -273,7 +333,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -286,7 +346,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C9F6VFYR26;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = HqBlockChainBase/HqBlockChainBase.pch;
 				INFOPLIST_FILE = HqBlockChainBase/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -302,7 +366,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C9F6VFYR26;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = HqBlockChainBase/HqBlockChainBase.pch;
 				INFOPLIST_FILE = HqBlockChainBase/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
